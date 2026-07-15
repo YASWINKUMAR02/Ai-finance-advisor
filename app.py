@@ -79,10 +79,9 @@ with st.sidebar:
     risk_tolerance = st.selectbox("Risk tolerance", ["Conservative", "Balanced", "Aggressive"], index=1)
     provider = st.selectbox("LLM provider", provider_options, index=default_provider_index)
     
-    env_key = os.getenv("OPENAI_API_KEY") if provider == "openai" else os.getenv("GROQ_API_KEY")
     api_key = st.text_input(
         f"{provider.capitalize()} API Key",
-        value=env_key if env_key else "",
+        value="",
         type="password",
         placeholder=f"Enter {provider} key..."
     )
@@ -112,21 +111,42 @@ with overview_tab:
     monthly_trend = _monthly_trend_frame(categorized_df)
 
     with col1:
-        bar_chart = px.bar(category_spend, x="category", y="spend", title="Spend by Category")
-        st.plotly_chart(bar_chart, use_container_width=True)
+        if not category_spend.empty:
+            bar_chart = px.bar(category_spend, x="category", y="spend", title="Spend by Category")
+            st.plotly_chart(bar_chart, use_container_width=True)
+        else:
+            st.info("No expense data available for Category Spend chart.")
+            
     with col2:
-        pie_chart = px.pie(category_spend, names="category", values="spend", title="Category Mix")
-        st.plotly_chart(pie_chart, use_container_width=True)
+        if not category_spend.empty:
+            pie_chart = px.pie(category_spend, names="category", values="spend", title="Category Mix")
+            st.plotly_chart(pie_chart, use_container_width=True)
+        else:
+            st.info("No expense data available for Category Mix chart.")
 
-    trend_chart = px.line(
-        monthly_trend,
-        x="month",
-        y="spend",
-        color="category",
-        markers=True,
-        title="Monthly Spend Trend",
-    )
-    st.plotly_chart(trend_chart, use_container_width=True)
+    if not monthly_trend.empty:
+        if monthly_trend["month"].nunique() == 1:
+            trend_chart = px.bar(
+                monthly_trend,
+                x="month",
+                y="spend",
+                color="category",
+                barmode="group",
+                title="Monthly Spend Trend (Single Month)",
+            )
+        else:
+            trend_chart = px.line(
+                monthly_trend,
+                x="month",
+                y="spend",
+                color="category",
+                markers=True,
+                title="Monthly Spend Trend",
+            )
+        st.plotly_chart(trend_chart, use_container_width=True)
+    else:
+        st.info("No expense data available for Monthly Trend chart.")
+        
     st.dataframe(categorized_df[["date", "merchant", "description", "amount", "category"]], use_container_width=True)
 
 with budget_tab:
