@@ -21,11 +21,12 @@ def _load_dataframe(uploaded_file) -> pd.DataFrame:
     return load_transactions("data/sample_transactions.csv")
 
 
-def _run_analysis(df: pd.DataFrame, provider: str, risk_tolerance: str) -> dict:
+def _run_analysis(df: pd.DataFrame, provider: str, risk_tolerance: str, api_key: str) -> dict:
     initial_state = {
         "user_query": "categorize budget investment fraud",
         "transactions_df": df,
         "provider": provider,
+        "api_key": api_key,
         "risk_tolerance": risk_tolerance,
         "chat_history": st.session_state.get("chat_history", []),
     }
@@ -77,19 +78,24 @@ with st.sidebar:
     uploaded_file = st.file_uploader("Upload transactions file", type=["csv", "xlsx"])
     risk_tolerance = st.selectbox("Risk tolerance", ["Conservative", "Balanced", "Aggressive"], index=1)
     provider = st.selectbox("LLM provider", provider_options, index=default_provider_index)
+    
+    env_key = os.getenv("OPENAI_API_KEY") if provider == "openai" else os.getenv("GROQ_API_KEY")
+    api_key = st.text_input(
+        f"{provider.capitalize()} API Key",
+        value=env_key if env_key else "",
+        type="password",
+        placeholder=f"Enter {provider} key..."
+    )
+
     use_sample = uploaded_file is None
     st.info("Using bundled sample data." if use_sample else "Using uploaded transaction data.")
     st.caption("Supported upload formats: `.csv`, `.xlsx`")
-    st.caption("API keys are loaded from the `.env` file or environment variables.")
-    if provider == "openai":
-        st.caption("Expected variable: `OPENAI_API_KEY`")
-    else:
-        st.caption("Expected variable: `GROQ_API_KEY`")
+    st.caption("API keys can also be loaded from the `.env` file or environment variables.")
 
-provider_has_key = bool(os.getenv("OPENAI_API_KEY") if provider == "openai" else os.getenv("GROQ_API_KEY"))
+provider_has_key = bool(api_key.strip())
 
 transactions_df = _load_dataframe(uploaded_file)
-analysis = _run_analysis(transactions_df, provider=provider, risk_tolerance=risk_tolerance)
+analysis = _run_analysis(transactions_df, provider=provider, risk_tolerance=risk_tolerance, api_key=api_key)
 categorized_df = analysis.get("categorized_df", transactions_df)
 budgets = analysis.get("budgets", {})
 investment = analysis.get("investment_recommendation", {})
@@ -181,7 +187,7 @@ with ask_tab:
             transactions=categorized_df,
             budgets=budgets,
             provider=provider,
-            api_key=None,
+            api_key=api_key,
         )
         answer = rag_result["answer"]
         st.session_state["chat_history"].append({"role": "assistant", "content": answer})
