@@ -75,6 +75,8 @@ default_provider_index = provider_options.index(default_provider) if default_pro
 
 with st.sidebar:
     st.header("Configuration")
+    st.caption("Required columns: `date`, `description`, `merchant`, `amount`")
+    st.caption("*(Note: Use negative amounts for expenditure and positive for salary/income)*")
     uploaded_file = st.file_uploader("Upload transactions file", type=["csv", "xlsx"])
     risk_tolerance = st.selectbox("Risk tolerance", ["Conservative", "Balanced", "Aggressive"], index=1)
     provider = st.selectbox("LLM provider", provider_options, index=default_provider_index)
