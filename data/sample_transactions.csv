@@ -1,0 +1,109 @@
+date,description,merchant,amount,category
+2026-01-01,lunch,Chipotle,-11.62,Dining
+2026-01-01,groceries,Whole Foods,-101.03,Groceries
+2026-01-01,salary deposit,Employer Payroll,4073.69,Income
+2026-01-01,transfer to savings,Marcus Savings,-171.56,Savings
+2026-01-02,coffee,Starbucks,-17.56,Dining
+2026-01-02,gym membership,Planet Fitness,-27.81,Health
+2026-01-04,fitness,Planet Fitness,-27.8,Health
+2026-01-05,weekly grocery run,Whole Foods,-60.66,Groceries
+2026-01-05,fuel,Shell,-61.94,Transport
+2026-01-06,online order,Amazon,-146.83,Shopping
+2026-01-06,burrito bowl,Chipotle,-16.97,Dining
+2026-01-07,grocery refill,Trader Joes,-43.92,Groceries
+2026-01-08,health purchase,CVS Pharmacy,-35.74,Health
+2026-01-08,coffee,Starbucks,-9.92,Dining
+2026-01-09,grocery refill,Trader Joes,-40.89,Groceries
+2026-01-10,home internet,Comcast,-73.34,Utilities
+2026-01-12,cinema tickets,AMC,-39.63,Entertainment
+2026-01-12,household essentials,Target,-114.86,Shopping
+2026-01-13,coffee,Starbucks,-10.52,Dining
+2026-01-13,gas station,Shell,-67.32,Transport
+2026-01-15,online order,Amazon,-127.48,Shopping
+2026-01-15,produce and pantry,Trader Joes,-38.65,Groceries
+2026-01-15,salary deposit,Employer Payroll,3787.42,Income
+2026-01-15,transfer to savings,Marcus Savings,-307.8,Savings
+2026-01-16,household order,Amazon,-66.93,Shopping
+2026-01-17,movie night,AMC,-40.29,Entertainment
+2026-01-19,fitness,Planet Fitness,-21.02,Health
+2026-01-20,retail purchase,Target,-20.32,Shopping
+2026-01-20,internet bill,Comcast,-82.26,Utilities
+2026-01-21,grocery refill,Trader Joes,-84.3,Groceries
+2026-01-21,burrito bowl,Chipotle,-10.91,Dining
+2026-01-22,breakfast coffee,Starbucks,-12.66,Dining
+2026-01-22,pharmacy,CVS Pharmacy,-36.96,Health
+2026-01-23,burrito bowl,Chipotle,-11.24,Dining
+2026-01-24,lunch,Chipotle,-17.89,Dining
+2026-01-25,cinema tickets,AMC,-44.89,Entertainment
+2026-01-26,fuel,Shell,-51.14,Transport
+2026-01-28,ride share,Uber,-16.84,Transport
+2026-01-28,household essentials,Target,-68.13,Shopping
+2026-01-29,weekly grocery run,Whole Foods,-41.03,Groceries
+2026-01-29,lunch,Chipotle,-18.65,Dining
+2026-01-30,coffee,Starbucks,-7.75,Dining
+2026-01-31,commute ride,Uber,-37.76,Transport
+2026-02-01,gas station,Shell,-62.54,Transport
+2026-02-01,salary deposit,Employer Payroll,4275.05,Income
+2026-02-01,transfer to savings,Marcus Savings,-164.22,Savings
+2026-02-03,health purchase,CVS Pharmacy,-41.78,Health
+2026-02-03,retail purchase,Target,-125.48,Shopping
+2026-02-04,coffee,Starbucks,-17.71,Dining
+2026-02-04,online order,Amazon,-76.44,Shopping
+2026-02-05,coffee,Starbucks,-14.79,Dining
+2026-02-05,grocery refill,Trader Joes,-34.83,Groceries
+2026-02-09,commute ride,Uber,-18.13,Transport
+2026-02-10,internet bill,Comcast,-74.81,Utilities
+2026-02-11,burrito bowl,Chipotle,-12.77,Dining
+2026-02-12,gym membership,Planet Fitness,-25.33,Health
+2026-02-13,burrito bowl,Chipotle,-16.36,Dining
+2026-02-13,grocery refill,Trader Joes,-38.96,Groceries
+2026-02-15,salary deposit,Employer Payroll,3733.15,Income
+2026-02-15,transfer to savings,Marcus Savings,-260.28,Savings
+2026-02-16,gym membership,Planet Fitness,-27.21,Health
+2026-02-16,fuel,Shell,-33.9,Transport
+2026-02-17,movie night,AMC,-43.33,Entertainment
+2026-02-17,lunch,Chipotle,-8.43,Dining
+2026-02-18,fuel,Shell,-52.17,Transport
+2026-02-18,gym membership,Planet Fitness,-21.35,Health
+2026-02-19,gas station,Shell,-74.9,Transport
+2026-02-19,health purchase,CVS Pharmacy,-50.94,Health
+2026-02-20,streaming music,Spotify,-11.21,Subscriptions
+2026-02-20,fitness,Planet Fitness,-28.45,Health
+2026-02-22,grocery refill,Trader Joes,-54.46,Groceries
+2026-02-23,household order,Amazon,-152.88,Shopping
+2026-02-23,grocery refill,Trader Joes,-59.8,Groceries
+2026-02-24,grocery refill,Trader Joes,-35.41,Groceries
+2026-02-24,coffee,Starbucks,-9.67,Dining
+2026-02-25,pharmacy,CVS Pharmacy,-15.1,Health
+2026-02-25,lunch,Chipotle,-13.9,Dining
+2026-02-26,breakfast coffee,Starbucks,-8.8,Dining
+2026-02-26,gym membership,Planet Fitness,-20.65,Health
+2026-02-27,online order,Amazon,-122.28,Shopping
+2026-03-01,movie night,AMC,-34.57,Entertainment
+2026-03-01,salary deposit,Employer Payroll,3606.52,Income
+2026-03-01,transfer to savings,Marcus Savings,-225.77,Savings
+2026-03-02,burrito bowl,Chipotle,-14.47,Dining
+2026-03-02,breakfast coffee,Starbucks,-16.15,Dining
+2026-03-03,coffee,Starbucks,-12.83,Dining
+2026-03-03,home internet,Comcast,-84.05,Utilities
+2026-03-04,weekly grocery run,Whole Foods,-63.23,Groceries
+2026-03-05,lunch,Chipotle,-18.3,Dining
+2026-03-05,ride share,Uber,-17.5,Transport
+2026-03-08,household order,Amazon,-131.09,Shopping
+2026-03-10,monthly subscription,Netflix,-21.35,Subscriptions
+2026-03-10,grocery refill,Trader Joes,-36.95,Groceries
+2026-03-11,weekly grocery run,Whole Foods,-54.45,Groceries
+2026-03-11,household order,Amazon,-137.06,Shopping
+2026-03-12,gym membership,Planet Fitness,-28.88,Health
+2026-03-12,weekly grocery run,Whole Foods,-73.62,Groceries
+2026-03-13,commute ride,Uber,-37.79,Transport
+2026-03-13,gym membership,Planet Fitness,-26.35,Health
+2026-03-14,retail purchase,Target,-114.79,Shopping
+2026-03-15,burrito bowl,Chipotle,-17.05,Dining
+2026-03-15,salary deposit,Employer Payroll,4281.69,Income
+2026-03-15,transfer to savings,Marcus Savings,-200.1,Savings
+2026-03-16,fuel,Shell,-29.12,Transport
+2026-03-17,fitness,Planet Fitness,-28.21,Health
+2026-03-17,weekly grocery run,Whole Foods,-53.5,Groceries
+2026-03-19,fuel,Shell,-57.02,Transport
+2026-03-19,lunch,Chipotle,-9.98,Dining
